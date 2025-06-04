@@ -3,27 +3,30 @@
   "name": "My Cool Extension",
   "version": "1.0",
   "permissions": [
-      "contextMenus",
-      "storage",
-      "scripting",
-      "tabs"
+    "contextMenus",
+    "storage",
+    "scripting",
+    "tabs",
+    "windows",
+    "activeTab"
   ],
   "background": {
-      "service_worker": "background.js"
+    "service_worker": "background.js"
+    
   },
   "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["content.js"]
-      }
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-          "16": "icon.png",
-          "48": "icon.png",
-          "128": "icon.png"
-      }
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
   }
 }
